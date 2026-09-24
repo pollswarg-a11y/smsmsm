@@ -102,3 +102,32 @@ h1 {
 .photo-card:not([data-main="true"]) {
   display: none;
 }
+
+/* Добавляем плавность для ВСЕХ карточек (допиши это в самый низ) */
+.photo-card {
+  opacity: 1;
+  transition: transform 0.4s ease, opacity 0.4s ease; /* Это заставит прозрачность меняться плавно, а не резко! */
+}
+
+/* Специальный класс-невидимка, который включает JavaScript */
+.photo-card.hidden {
+  opacity: 0; /* Делаем картинку прозрачной */
+  transform: scale(0.95); /* Картинка будет чуточку уменьшаться при исчезновении */
+  pointer-events: none; /* Защита: на скрытую картинку нельзя будет случайно кликнуть */
+}
+
+/* Когда кнопка раздела становится АКТИВНОЙ, она загорается белым неоном */
+.vibe-btn.active {
+  background-color: #ffffff;
+  color: #121214;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+  border-color: #490707;
+}
+
+/* А когда активной становится красная кнопка Show All, она горит КРАСНЫМ неоном */
+.vibe-btn.btn-all.active {
+  background-color: #ff758f;
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(255, 117, 143, 0.8);
+  border-color: #ff758f;
+}

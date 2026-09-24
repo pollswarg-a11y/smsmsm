@@ -76,7 +76,53 @@
 
   </div>
   <!-- Connecting our JavaScript file -->
- <script src="./script.js"></script> 
+  <!-- Наш новый вшитый мозг с плавной анимацией -->
+  <script>
+    const buttons = document.querySelectorAll('.vibe-btn');
+    const cards = document.querySelectorAll('.photo-card');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const chosenVibe = button.textContent.trim().toLowerCase();
+        
+        cards.forEach(card => {
+          const rawVibe = card.getAttribute('data-vibe');
+          const cardVibe = rawVibe ? rawVibe.trim().toLowerCase() : '';
+          const isMainCard = card.getAttribute('data-main') === 'true';
+          
+          // Функция для ПЛАВНОГО ПОКАЗА картинки
+          function showCard() {
+            card.style.display = 'block';
+            setTimeout(() => card.classList.remove('hidden'), 10);
+          }
+
+          // Функция для ПЛАВНОГО СКРЫТИЯ картинки
+          function hideCard() {
+            card.classList.add('hidden');
+            setTimeout(() => {
+              if (card.classList.contains('hidden')) card.style.display = 'none';
+            }, 400);
+          }
+
+          // Логика кнопки Show All
+          if (chosenVibe === 'show all') {
+            if (isMainCard) {
+              showCard();
+            } else {
+              hideCard();
+            }
+          } 
+          // Логика кнопок разделов
+          else if (cardVibe && (chosenVibe.includes(cardVibe) || cardVibe.includes(chosenVibe))) {
+            showCard();
+          } else {
+            hideCard();
+          }
+        });
+      });
+    });
+  </script>
+
 
 </body>
 </html>
