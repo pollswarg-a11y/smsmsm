@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>my Space</title>
+  <!-- Connecting our style file -->
+  <link rel="stylesheet" href="./style.css"> 
+</head>
+<body>
+
+  <!-- Main header of the webpage -->
+  <h1>my fav</h1>
+
+  <div class="mood-navigation">
+    <!-- Оборачиваем кнопку Show All -->
+    <div class="top-nav">
+      <button class="vibe-btn btn-all">Show All</button>
+    </div>
+    
+    <!-- Оборачиваем остальные три кнопки -->
+    <div class="categories-nav">
+      <button class="vibe-btn">lps</button >
+      <button class="vibe-btn">monster high</button>
+      <button class="vibe-btn">lalaloopsy</button>
+    </div>
+  </div>
+
+
+  <!-- The main container where all our photos will live -->
+  <div class="gallery-container">
+    
+    <div class="photo-card" data-main="true">
+      <img src="https://i.pinimg.com/736x/29/03/3f/29033fa12e44799bf5573766795daed6.jpg" alt="lps"> 
+    </div>
+    
+    <div class="photo-card" data-main="true">
+      <img src="https://i.pinimg.com/736x/94/a2/39/94a239e58382f4b9c8b7665a02cfa1a4.jpg" alt="monster high">
+    </div>
+    
+    <div class="photo-card" data-main="true">
+      <img src="https://i.pinimg.com/736x/8b/b0/ee/8bb0ee63a510a89b06d0d3ebd3e2bffb.jpg" alt="lalaloopsy">
+    </div>
+
+      <div class="gallery-container">
+    
+    <!-- === СЕКЦИЯ lps === -->
+    <div class="photo-card" data-vibe="lps">
+      <img src="https://i.pinimg.com/736x/ac/7e/54/ac7e541f0c35661566e15d18956570e2.jpg" alt="lps 1">
+    </div>
+    <!-- НАША НОВИНКА: Вторая картинка для Юху -->
+    <div class="photo-card" data-vibe="lps">
+      <img src="https://i.pinimg.com/736x/0f/cb/9c/0fcb9c53dfe490c0b81c7b05926c11e8.jpg" alt="lps 2">
+    </div>
+    
+    <!-- === СЕКЦИЯ MONSTER HIGH === -->
+    <div class="photo-card" data-vibe="monster high">
+      <img src="https://i.pinimg.com/736x/d6/9b/7d/d69b7d141e461a232f395c033c705c13.jpg" alt="monster high 1">
+    </div>
+    <!-- НАША НОВИНКА: Вторая картинка для Монстер Хай (например, Дракулаура) -->
+    <div class="photo-card" data-vibe="monster high">
+      <img src="https://i.pinimg.com/736x/c9/43/c2/c943c2648f0f5f1ec37236eb6443de5b.jpg" alt="monster high 2">
+    </div>
+    
+    <!-- === СЕКЦИЯ LALALOOPSY === -->
+    <div class="photo-card" data-vibe="lalaloopsy">
+      <img src="https://i.pinimg.com/736x/a9/a4/87/a9a4877a6fa498f34a5ad99bccf4f031.jpg" alt="lalaloopsy 1">
+    </div>
+    <!-- НАША НОВИНКА: Вторая картинка для Лалалупси -->
+    <div class="photo-card" data-vibe="lalaloopsy">
+      <img src="https://i.pinimg.com/736x/85/6a/7b/856a7bffa4e49a89b84118d72ba1f7d8.jpg" alt="lalaloopsy 2">
+    </div>
+
+  </div>
+
+
+  </div>
+  <!-- Connecting our JavaScript file -->
+ <script src="./script.js"></script> 
+
+</body>
+</html>
