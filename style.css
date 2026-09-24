@@ -1,0 +1,104 @@
+/* Base settings for the whole page */
+body {
+  background-color: #121214; /* Dark stylish background */
+  color: #ffffff; /* White text color */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding: 40px 20px;
+  margin: 0;
+}
+
+/* Header style */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+/* Style for the button container */
+.mood-navigation {
+  margin-bottom: 40px;
+}
+
+/* Space between the top button and category buttons */
+.top-nav {
+  margin-bottom: 15px;
+}
+
+/* Beautiful rounded buttons (for categories) */
+.vibe-btn {
+  background-color: #232329;
+  color: #ffffff;
+  border: 2px solid #3a3a44;
+  padding: 14px 28px; /* Making them nice and big */
+  margin: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 30px; /* Makes them perfectly rounded */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for category buttons */
+.vibe-btn:hover {
+  background-color: #ffffff;
+  color: #121214;
+  transform: translateY(-3px); /* Slightly lifts the button up */
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* SPECIAL STYLE for the "Show All" button */
+.vibe-btn.btn-all {
+  padding: 8px 18px; /* Making it SMALLER than others */
+  font-size: 0.9rem; /* Smaller font size */
+  background-color: transparent;
+  border-color: #ff758f; /* Beautiful pink border */
+  color: #ff758f; /* Pink text */
+}
+
+/* Hover effect for the pink button */
+.vibe-btn.btn-all:hover {
+  background-color: #ff758f; /* Fills with pink on hover */
+  color: #ffffff; /* Text becomes white */
+  box-shadow: 0 0 15px rgba(255, 117, 143, 0.4); /* Soft pink glow */
+}
+
+/* Flexbox container for the photo gallery */
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap; /* Essential for optimization */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Container for each photo card */
+.photo-card {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden; /* Hides everything that overflows the borders */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease;
+}
+
+/* Hover effect for photo cards */
+.photo-card:hover {
+  transform: scale(1.03); /* Soft zoom-in effect */
+}
+
+/* The ultimate optimization rule for images */
+.photo-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Images adjust perfectly and never stretch ughly! */
+}
+
+/* AUTOMATIC HIDING FEATURE: */
+/* This hides all additional photos by default when the site loads. */
+/* Only photos with data-main="true" will stay visible! */
+.photo-card:not([data-main="true"]) {
+  display: none;
+}
